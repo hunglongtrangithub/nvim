@@ -1,3 +1,4 @@
+local colorscheme = require("lazyvim.plugins.colorscheme")
 return {
   -- add colorscheme
   -- {
@@ -12,14 +13,14 @@ return {
   --     },
   --   },
   -- },
-  -- {
-  --   "craftzdog/solarized-osaka.nvim",
-  --   lazy = true,
-  --   priority = 1000,
-  --   opts = {
-  --     transparent = true,
-  --   },
-  -- },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {
+      transparent = true,
+    },
+  },
   -- {
   --   "oxfist/night-owl.nvim",
   --   lazy = true,
@@ -28,15 +29,15 @@ return {
   --     transparent_background = true, -- apparently this is not working
   --   },
   -- },
-  {
-    "catppuccin",
-    lazy = true,
-    priority = 1000,
-    opts = {
-      flavour = "mocha",
-      transparent_background = true,
-    },
-  },
+  -- {
+  --   "catppuccin",
+  --   lazy = true,
+  --   priority = 1000,
+  --   opts = {
+  --     flavour = "mocha",
+  --     transparent_background = true,
+  --   },
+  -- },
   -- {
   --   "marko-cerovac/material.nvim",
   --   lazy = true,
@@ -61,6 +62,11 @@ return {
   --     transparent = true,
   --   },
   -- },
+  {
+    "shaunsingh/moonlight.nvim",
+    lazy = true,
+    priority = 1000,
+  },
   -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
@@ -69,9 +75,10 @@ return {
       -- colorscheme = "night-owl",
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
-      colorscheme = "catppuccin",
+      -- colorscheme = "catppuccin",
       -- colorscheme = "material",
       -- colorscheme = "moonfly",
+      colorscheme = "moonlight",
     },
   },
 }
