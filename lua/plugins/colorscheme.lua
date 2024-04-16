@@ -1,4 +1,3 @@
-local colorscheme = require("lazyvim.plugins.colorscheme")
 return {
   -- add colorscheme
   {
@@ -27,6 +26,10 @@ return {
     priority = 1000,
     opts = {
       transparent_background = true, -- apparently this is not working
+      bold = true,
+      italics = true,
+      underline = true,
+      undercurl = true,
     },
   },
   {
@@ -87,11 +90,11 @@ return {
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "catppuccin",
-      -- colorscheme = "material",
+      colorscheme = "material",
       -- colorscheme = "moonfly",
       -- colorscheme = "moonlight",
       -- colorscheme = "nightfly",
-      colorscheme = "cyberpunk",
+      -- colorscheme = "cyberpunk",
     },
   },
 }
