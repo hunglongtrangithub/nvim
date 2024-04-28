@@ -71,12 +71,6 @@ return {
     priority = 1000,
   },
   {
-    "bluz71/vim-nightfly-colors",
-    name = "nightfly",
-    lazy = false,
-    priority = 1000,
-  },
-  {
     "thedenisnikulin/vim-cyberpunk",
     lazy = true,
     priority = 1000,
@@ -93,7 +87,6 @@ return {
       colorscheme = "material",
       -- colorscheme = "moonfly",
       -- colorscheme = "moonlight",
-      -- colorscheme = "nightfly",
       -- colorscheme = "cyberpunk",
     },
   },
