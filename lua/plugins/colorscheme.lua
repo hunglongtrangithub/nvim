@@ -25,7 +25,7 @@ return {
     lazy = true,
     priority = 1000,
     opts = {
-      transparent_background = true, -- apparently this is not working
+      transparent_background = true,
       bold = true,
       italics = true,
       underline = true,
@@ -80,11 +80,11 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "kanagawa",
-      -- colorscheme = "night-owl",
+      colorscheme = "night-owl",
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "catppuccin",
-      colorscheme = "material",
+      -- colorscheme = "material",
       -- colorscheme = "moonfly",
       -- colorscheme = "moonlight",
       -- colorscheme = "cyberpunk",
