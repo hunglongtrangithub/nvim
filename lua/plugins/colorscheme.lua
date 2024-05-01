@@ -75,12 +75,27 @@ return {
     lazy = true,
     priority = 1000,
   },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("cyberdream").setup({
+        -- Recommended - see "Configuring" below for more config options
+        transparent = true,
+        italic_comments = true,
+        hide_fillchars = true,
+        borderless_telescope = true,
+        terminal_colors = true,
+      })
+    end,
+  },
   -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "kanagawa",
-      colorscheme = "night-owl",
+      -- colorscheme = "night-owl",
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "catppuccin",
@@ -88,6 +103,7 @@ return {
       -- colorscheme = "moonfly",
       -- colorscheme = "moonlight",
       -- colorscheme = "cyberpunk",
+      colorscheme = "cyberdream",
     },
   },
 }
