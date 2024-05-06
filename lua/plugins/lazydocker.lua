@@ -5,4 +5,11 @@ return {
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
+  keys = {
+    {
+      "<leader>k",
+      "<cmd>LazyDocker<CR>",
+      desc = "Toggle LazyDocker",
+    },
+  },
 }

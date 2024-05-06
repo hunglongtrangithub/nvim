@@ -17,4 +17,11 @@ return {
     })
     require("telescope").load_extension("undo")
   end,
+  keys = {
+    {
+      "<leader>cu",
+      "<cmd>Telescope undo<cr>",
+      desc = "Telescope undo",
+    },
+  },
 }
