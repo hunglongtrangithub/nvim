@@ -90,6 +90,22 @@ return {
       })
     end,
   },
+  {
+    "loctvl842/monokai-pro.nvim",
+    config = function()
+      require("monokai-pro").setup({
+        transparent_background = true,
+        terminal_colors = false,
+        filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
+        -- Enable this will disable filter option
+        day_night = {
+          enable = false, -- turn off by default
+          day_filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
+          night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
+        },
+      })
+    end,
+  },
   -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
@@ -103,7 +119,8 @@ return {
       -- colorscheme = "moonfly",
       -- colorscheme = "moonlight",
       -- colorscheme = "cyberpunk",
-      colorscheme = "cyberdream",
+      -- colorscheme = "cyberdream",
+      colorscheme = "monokai-pro",
     },
   },
 }
