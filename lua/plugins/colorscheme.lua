@@ -103,6 +103,11 @@ return {
           day_filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
           night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
         },
+        overridePalette = function(filter)
+          return {
+            dimmed3 = "#b3b3b3", -- change color of comments
+          }
+        end,
       })
     end,
   },

@@ -13,14 +13,9 @@ return {
     -- See Commands section for default commands if you want to lazy load on them
     keys = {
       {
-        "<leader>Po",
+        "<leader>po",
         "<cmd>CopilotChatOpen<cr>",
         desc = "Open Copilot Chat",
-      },
-      {
-        "<leader>Pt",
-        "<cmd>CopilotChatToggle<cr>",
-        desc = "Toggle Copilot Chat",
       },
     },
   },
