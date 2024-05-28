@@ -15,6 +15,7 @@ return {
         "javascript",
         "json",
         "astro",
+        "sql",
       },
     },
   },

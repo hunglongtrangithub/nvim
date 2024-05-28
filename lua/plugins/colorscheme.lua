@@ -99,8 +99,8 @@ return {
         filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
         -- Enable this will disable filter option
         day_night = {
-          enable = false, -- turn off by default
-          day_filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
+          enable = true, -- turn off by default
+          day_filter = "machine", -- classic | octagon | pro | machine | ristretto | spectrum
           night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
         },
         overridePalette = function(filter)
@@ -116,7 +116,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "kanagawa",
-      -- colorscheme = "night-owl",
+      colorscheme = "night-owl",
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "catppuccin",
@@ -125,7 +125,7 @@ return {
       -- colorscheme = "moonlight",
       -- colorscheme = "cyberpunk",
       -- colorscheme = "cyberdream",
-      colorscheme = "monokai-pro",
+      -- colorscheme = "monokai-pro",
     },
   },
 }
