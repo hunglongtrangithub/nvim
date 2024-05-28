@@ -19,7 +19,7 @@ return {
   end,
   keys = {
     {
-      "<leader>cu",
+      "<leader>cU",
       "<cmd>Telescope undo<cr>",
       desc = "Telescope undo",
     },
