@@ -2,7 +2,7 @@ return {
   {
     "ojroques/nvim-osc52",
     opts = {
-      tmux_passthrough = false,
+      tmux_passthrough = true,
     },
   },
 }

@@ -10,6 +10,7 @@ return {
         sidebars = "transparent",
         floats = "transparent",
       },
+      terminal_colors = false,
     },
   },
   {
@@ -33,7 +34,8 @@ return {
     },
   },
   {
-    "catppuccin",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = true,
     priority = 1000,
     opts = {
@@ -77,7 +79,7 @@ return {
   },
   {
     "scottmckendry/cyberdream.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       require("cyberdream").setup({
@@ -86,7 +88,7 @@ return {
         italic_comments = true,
         hide_fillchars = true,
         borderless_telescope = true,
-        terminal_colors = true,
+        terminal_colors = false,
       })
     end,
   },
@@ -111,21 +113,59 @@ return {
       })
     end,
   },
+  {
+    "tiagovla/tokyodark.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {
+      -- custom options here
+      transparent_background = true,
+      terminal_colors = false,
+    },
+    config = function(_, opts)
+      require("tokyodark").setup(opts) -- calling setup is optional
+      vim.cmd([[colorscheme tokyodark]])
+    end,
+  },
+  {
+    "Shatur/neovim-ayu",
+    lazy = true,
+    priority = 1000,
+    config = function()
+      require("ayu").setup({
+        mirage = false,
+        terminal = false,
+        overrides = {
+          Normal = { bg = "None" },
+          ColorColumn = { bg = "None" },
+          SignColumn = { bg = "None" },
+          Folded = { bg = "None" },
+          FoldColumn = { bg = "None" },
+          CursorLine = { bg = "None" },
+          CursorColumn = { bg = "None" },
+          WhichKeyFloat = { bg = "None" },
+          VertSplit = { bg = "None" },
+        },
+      })
+    end,
+  },
   -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "kanagawa",
-      colorscheme = "night-owl",
+      -- colorscheme = "night-owl",
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
-      -- colorscheme = "catppuccin",
+      colorscheme = "catppuccin",
       -- colorscheme = "material",
       -- colorscheme = "moonfly",
       -- colorscheme = "moonlight",
       -- colorscheme = "cyberpunk",
       -- colorscheme = "cyberdream",
       -- colorscheme = "monokai-pro",
+      -- colorscheme = "tokyodark",
+      -- colorscheme = "ayu",
     },
   },
 }
