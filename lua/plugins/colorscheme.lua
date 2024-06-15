@@ -64,7 +64,9 @@ return {
     lazy = true,
     priority = 1000,
     opts = {
-      transparent = true,
+      -- transparent = true,
+      terminalColors = false,
+      theme = "lotus", -- Load "wave" theme when 'background' option is not set
     },
   },
   {
@@ -119,7 +121,7 @@ return {
     priority = 1000,
     opts = {
       -- custom options here
-      transparent_background = true,
+      -- transparent_background = true,
       terminal_colors = false,
     },
     config = function(_, opts)
@@ -135,19 +137,26 @@ return {
       require("ayu").setup({
         mirage = false,
         terminal = false,
-        overrides = {
-          Normal = { bg = "None" },
-          ColorColumn = { bg = "None" },
-          SignColumn = { bg = "None" },
-          Folded = { bg = "None" },
-          FoldColumn = { bg = "None" },
-          CursorLine = { bg = "None" },
-          CursorColumn = { bg = "None" },
-          WhichKeyFloat = { bg = "None" },
-          VertSplit = { bg = "None" },
-        },
+        -- overrides = {
+        --   Normal = { bg = "None" },
+        --   ColorColumn = { bg = "None" },
+        --   SignColumn = { bg = "None" },
+        --   Folded = { bg = "None" },
+        --   FoldColumn = { bg = "None" },
+        --   CursorLine = { bg = "None" },
+        --   CursorColumn = { bg = "None" },
+        --   WhichKeyFloat = { bg = "None" },
+        --   VertSplit = { bg = "None" },
+        -- },
       })
     end,
+  },
+  { "diegoulloao/neofusion.nvim", priority = 1000, config = true, opts = { transparent_mode = true } },
+  {
+    "cvigilv/patana.nvim",
+    lazy = true,
+    priority = 1000,
+    config = function() end,
   },
   -- Configure LazyVim to load colorscheme
   {
@@ -166,6 +175,8 @@ return {
       -- colorscheme = "monokai-pro",
       -- colorscheme = "tokyodark",
       -- colorscheme = "ayu",
+      -- colorscheme = "neofusion",
+      -- colorscheme = "patana",
     },
   },
 }
