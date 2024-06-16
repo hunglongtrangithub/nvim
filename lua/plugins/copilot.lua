@@ -19,6 +19,7 @@ return {
       },
     },
     keys = {
+      { "<leader>p", "", desc = "+copilot" },
       {
         "<leader>pt",
         function()
