@@ -9,7 +9,7 @@ return {
     {
       "<leader>k",
       "<cmd>LazyDocker<CR>",
-      desc = "Toggle LazyDocker",
+      desc = "Lazydocker",
     },
   },
 }

@@ -47,11 +47,15 @@ return {
     "marko-cerovac/material.nvim",
     lazy = true,
     priority = 1000,
-    opts = {
-      disable = {
-        background = true,
-      },
-    },
+    config = function()
+      vim.g.material_style = "deep ocean"
+      require("material").setup({
+        disable = {
+          background = true,
+        },
+        lualine_style = "stealth",
+      })
+    end,
   },
   {
     "bluz71/vim-moonfly-colors",
@@ -116,6 +120,20 @@ return {
     end,
   },
   {
+    "polirritmico/monokai-nightasty.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      dark_style_background = "dark", -- default, dark, transparent, #color
+      light_style_background = "default", -- default, dark, transparent, #color
+      -- Style to be applied to different syntax groups. See `:help nvim_set_hl`
+      hl_styles = {
+        keywords = { italic = true },
+        comments = { italic = true },
+      },
+    },
+  },
+  {
     "tiagovla/tokyodark.nvim",
     lazy = true,
     priority = 1000,
@@ -163,10 +181,10 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "kanagawa",
-      -- colorscheme = "night-owl",
+      colorscheme = "night-owl",
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
-      colorscheme = "catppuccin",
+      -- colorscheme = "catppuccin",
       -- colorscheme = "material",
       -- colorscheme = "moonfly",
       -- colorscheme = "moonlight",
@@ -177,6 +195,7 @@ return {
       -- colorscheme = "ayu",
       -- colorscheme = "neofusion",
       -- colorscheme = "patana",
+      -- colorscheme = "monokai-nightasty",
     },
   },
 }
