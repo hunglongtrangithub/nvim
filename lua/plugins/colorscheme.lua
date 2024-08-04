@@ -50,7 +50,7 @@ return {
   {
     "marko-cerovac/material.nvim",
     lazy = true,
-    enabled = false,
+    enabled = true,
     priority = 1000,
     config = function()
       vim.g.material_style = "deep ocean"
@@ -65,13 +65,14 @@ return {
   {
     "bluz71/vim-moonfly-colors",
     name = "moonfly",
+    enabled = false,
     lazy = false,
     priority = 1000,
   },
   {
     "rebelot/kanagawa.nvim",
     lazy = true,
-    enabled = false,
+    enabled = true,
     priority = 1000,
     opts = {
       -- transparent = true,
@@ -109,6 +110,8 @@ return {
   },
   {
     "loctvl842/monokai-pro.nvim",
+    lazy = true,
+    enabled = false,
     config = function()
       require("monokai-pro").setup({
         transparent_background = true,
@@ -130,6 +133,7 @@ return {
   },
   {
     "polirritmico/monokai-nightasty.nvim",
+    enabled = false,
     lazy = false,
     priority = 1000,
     opts = {
@@ -141,6 +145,18 @@ return {
         comments = { italic = true },
       },
     },
+    config = function(_, opts)
+      require("monokai-nightasty").setup(opts)
+      require("which-key").add({
+        -- momokai-nightasty
+        {
+          "<leader>tt",
+          "<Cmd>MonokaiToggleLight<CR>",
+          desc = "Monokai-Nightasty: Toggle dark/light theme.",
+          hidden = true,
+        },
+      })
+    end,
   },
   {
     "tiagovla/tokyodark.nvim",
@@ -198,13 +214,26 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
+    enabled = true,
     opts = {
       enable = {
         terminal = true,
       },
       styles = {
-        transparency = true,
+        transparency = false,
       },
+    },
+  },
+  {
+    "0xstepit/flow.nvim",
+    enabled = false,
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      fluo_color = "pink",
+      mode = "desaturate",
+      aggressive_spell = false,
     },
   },
   -- Configure LazyVim to load colorscheme
@@ -228,6 +257,7 @@ return {
       -- colorscheme = "patana",
       -- colorscheme = "monokai-nightasty",
       colorscheme = "rose-pine",
+      -- colorscheme = "flow",
     },
   },
 }

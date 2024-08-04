@@ -18,32 +18,35 @@ return {
         help = true,
       },
     },
-    keys = {
-      { "<leader>p", "", desc = "+copilot" },
-      {
-        "<leader>pt",
-        function()
-          require("copilot.suggestion").toggle_auto_trigger()
-          vim.notify("Copilot auto trigger toggled")
-        end,
-        desc = "Toggle Copilot auto trigger",
-      },
-      {
-        "<leader>pe",
-        function()
-          require("copilot.command").enable()
-          vim.notify("Copilot enabled")
-        end,
-        desc = "Enable Copilot",
-      },
-      {
-        "<leader>pd",
-        function()
-          require("copilot.command").disable()
-          vim.notify("Copilot disabled")
-        end,
-        desc = "Disable Copilot",
-      },
-    },
+    config = function(_, opts)
+      require("copilot").setup(opts)
+      require("which-key").add({
+        { "<leader>cp", group = "copilot" },
+        {
+          "<leader>cpt",
+          function()
+            require("copilot.suggestion").toggle_auto_trigger()
+            vim.notify("Copilot auto trigger toggled")
+          end,
+          desc = "Toggle Copilot auto trigger",
+        },
+        {
+          "<leader>cpe",
+          function()
+            require("copilot.command").enable()
+            vim.notify("Copilot enabled")
+          end,
+          desc = "Enable Copilot",
+        },
+        {
+          "<leader>cpd",
+          function()
+            require("copilot.command").disable()
+            vim.notify("Copilot disabled")
+          end,
+          desc = "Disable Copilot",
+        },
+      })
+    end,
   },
 }
