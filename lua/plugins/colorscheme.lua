@@ -3,7 +3,6 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    enabled = true,
     priority = 1000,
     opts = {
       transparent = true,
@@ -17,7 +16,6 @@ return {
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = true,
-    enabled = false,
     priority = 1000,
     opts = {
       transparent = true,
@@ -26,7 +24,6 @@ return {
   {
     "oxfist/night-owl.nvim",
     lazy = true,
-    enabled = true,
     priority = 1000,
     opts = {
       transparent_background = true,
@@ -40,7 +37,6 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = true,
-    enabled = false,
     priority = 1000,
     opts = {
       flavour = "mocha",
@@ -50,13 +46,12 @@ return {
   {
     "marko-cerovac/material.nvim",
     lazy = true,
-    enabled = true,
     priority = 1000,
     config = function()
       vim.g.material_style = "deep ocean"
       require("material").setup({
         disable = {
-          background = true,
+          background = false,
         },
         lualine_style = "stealth",
       })
@@ -65,14 +60,12 @@ return {
   {
     "bluz71/vim-moonfly-colors",
     name = "moonfly",
-    enabled = false,
     lazy = false,
     priority = 1000,
   },
   {
     "rebelot/kanagawa.nvim",
     lazy = true,
-    enabled = true,
     priority = 1000,
     opts = {
       -- transparent = true,
@@ -83,19 +76,16 @@ return {
   {
     "shaunsingh/moonlight.nvim",
     lazy = true,
-    enabled = false,
     priority = 1000,
   },
   {
     "thedenisnikulin/vim-cyberpunk",
     lazy = true,
-    enabled = false,
     priority = 1000,
   },
   {
     "scottmckendry/cyberdream.nvim",
     lazy = true,
-    enabled = false,
     priority = 1000,
     config = function()
       require("cyberdream").setup({
@@ -111,7 +101,6 @@ return {
   {
     "loctvl842/monokai-pro.nvim",
     lazy = true,
-    enabled = false,
     config = function()
       require("monokai-pro").setup({
         transparent_background = true,
@@ -133,7 +122,6 @@ return {
   },
   {
     "polirritmico/monokai-nightasty.nvim",
-    enabled = false,
     lazy = false,
     priority = 1000,
     opts = {
@@ -161,7 +149,6 @@ return {
   {
     "tiagovla/tokyodark.nvim",
     lazy = true,
-    enabled = false,
     priority = 1000,
     opts = {
       -- custom options here
@@ -176,7 +163,6 @@ return {
   {
     "Shatur/neovim-ayu",
     lazy = true,
-    enabled = false,
     priority = 1000,
     config = function()
       require("ayu").setup({
@@ -199,7 +185,6 @@ return {
   {
     "diegoulloao/neofusion.nvim",
     lazy = true,
-    enabled = false,
     priority = 1000,
     config = true,
     opts = { transparent_mode = true },
@@ -207,14 +192,12 @@ return {
   {
     "cvigilv/patana.nvim",
     lazy = true,
-    enabled = false,
     priority = 1000,
     config = function() end,
   },
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    enabled = true,
     opts = {
       enable = {
         terminal = true,
@@ -226,7 +209,6 @@ return {
   },
   {
     "0xstepit/flow.nvim",
-    enabled = false,
     lazy = false,
     priority = 1000,
     opts = {
@@ -241,7 +223,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "kanagawa",
-      -- colorscheme = "night-owl",
+      colorscheme = "night-owl",
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "catppuccin",
@@ -256,7 +238,7 @@ return {
       -- colorscheme = "neofusion",
       -- colorscheme = "patana",
       -- colorscheme = "monokai-nightasty",
-      colorscheme = "rose-pine",
+      -- colorscheme = "rose-pine",
       -- colorscheme = "flow",
     },
   },
