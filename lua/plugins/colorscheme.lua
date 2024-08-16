@@ -203,7 +203,7 @@ return {
         terminal = true,
       },
       styles = {
-        transparency = false,
+        transparency = true,
       },
     },
   },
@@ -223,7 +223,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "kanagawa",
-      colorscheme = "night-owl",
+      -- colorscheme = "night-owl",
       -- colorscheme = "tokyonight",
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "catppuccin",
@@ -238,7 +238,7 @@ return {
       -- colorscheme = "neofusion",
       -- colorscheme = "patana",
       -- colorscheme = "monokai-nightasty",
-      -- colorscheme = "rose-pine",
+      colorscheme = "rose-pine",
       -- colorscheme = "flow",
     },
   },
