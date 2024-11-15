@@ -6,3 +6,5 @@ if vim.g.neovide then
   vim.g.neovide_transparency = 0.75
   vim.g.neovide_cursor_vfx_mode = "sonicboom"
 end
+
+vim.opt.wrap = true

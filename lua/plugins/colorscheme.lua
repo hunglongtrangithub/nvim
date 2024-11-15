@@ -5,11 +5,11 @@ return {
     lazy = true,
     priority = 1000,
     opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+      transparent = false,
+      -- styles = {
+      --   sidebars = "transparent",
+      --   floats = "transparent",
+      -- },
       terminal_colors = false,
     },
   },
@@ -18,7 +18,7 @@ return {
     lazy = true,
     priority = 1000,
     opts = {
-      transparent = true,
+      transparent = false,
     },
   },
   {
@@ -26,7 +26,7 @@ return {
     lazy = true,
     priority = 1000,
     opts = {
-      transparent_background = true,
+      transparent_background = false,
       bold = true,
       italics = true,
       underline = true,
@@ -40,7 +40,7 @@ return {
     priority = 1000,
     opts = {
       flavour = "mocha",
-      transparent_background = true,
+      transparent_background = false,
     },
   },
   {
@@ -90,7 +90,7 @@ return {
     config = function()
       require("cyberdream").setup({
         -- Recommended - see "Configuring" below for more config options
-        transparent = true,
+        transparent = false,
         italic_comments = true,
         hide_fillchars = true,
         borderless_telescope = true,
@@ -103,7 +103,7 @@ return {
     lazy = true,
     config = function()
       require("monokai-pro").setup({
-        transparent_background = true,
+        transparent_background = false,
         terminal_colors = false,
         filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
         -- Enable this will disable filter option
@@ -135,15 +135,15 @@ return {
     },
     config = function(_, opts)
       require("monokai-nightasty").setup(opts)
-      require("which-key").add({
-        -- momokai-nightasty
-        {
-          "<leader>tt",
-          "<Cmd>MonokaiToggleLight<CR>",
-          desc = "Monokai-Nightasty: Toggle dark/light theme.",
-          hidden = true,
-        },
-      })
+      -- require("which-key").add({
+      --   -- momokai-nightasty
+      --   {
+      --     "<leader>tt",
+      --     "<Cmd>MonokaiToggleLight<CR>",
+      --     desc = "Monokai-Nightasty: Toggle dark/light theme.",
+      --     hidden = true,
+      --   },
+      -- })
     end,
   },
   {
@@ -218,28 +218,49 @@ return {
       aggressive_spell = false,
     },
   },
-  -- Configure LazyVim to load colorscheme
   {
-    "LazyVim/LazyVim",
-    opts = {
-      -- colorscheme = "kanagawa",
-      -- colorscheme = "night-owl",
-      -- colorscheme = "tokyonight",
-      -- colorscheme = "solarized-osaka",
-      -- colorscheme = "catppuccin",
-      -- colorscheme = "material",
-      -- colorscheme = "moonfly",
-      -- colorscheme = "moonlight",
-      -- colorscheme = "cyberpunk",
-      -- colorscheme = "cyberdream",
-      -- colorscheme = "monokai-pro",
-      -- colorscheme = "tokyodark",
-      -- colorscheme = "ayu",
-      -- colorscheme = "neofusion",
-      -- colorscheme = "patana",
-      -- colorscheme = "monokai-nightasty",
-      colorscheme = "rose-pine",
-      -- colorscheme = "flow",
-    },
+    "EdenEast/nightfox.nvim",
+  },
+  {
+    "aliqyan-21/darkvoid.nvim",
+  },
+  {
+    "AlexvZyl/nordic.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("nordic").load()
+    end,
+  },
+  {
+    "zaldih/themery.nvim",
+    lazy = false,
+    config = function()
+      require("themery").setup({
+        themes = {
+          "kanagawa",
+          "night-owl",
+          "tokyonight",
+          "solarized-osaka",
+          "catppuccin",
+          "material",
+          "moonfly",
+          "moonlight",
+          "cyberpunk",
+          "cyberdream",
+          "monokai-pro",
+          "tokyodark",
+          "ayu",
+          "neofusion",
+          "patana",
+          "monokai-nightasty",
+          "rose-pine",
+          "flow",
+          "nightfox",
+          "darkvoid",
+          "nordic",
+        },
+      })
+    end,
   },
 }
