@@ -1,5 +1,4 @@
 return {
-  -- add copilot
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
