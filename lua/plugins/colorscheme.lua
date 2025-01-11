@@ -203,7 +203,7 @@ return {
         terminal = true,
       },
       styles = {
-        transparency = true,
+        transparency = false,
       },
     },
   },
