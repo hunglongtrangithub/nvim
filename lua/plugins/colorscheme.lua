@@ -225,6 +225,23 @@ return {
     "aliqyan-21/darkvoid.nvim",
   },
   {
+    "ray-x/starry.nvim",
+    opts = {
+      style = {
+        name = "emerald",
+      },
+    },
+  },
+  {
+    "comfysage/evergarden",
+    priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+    opts = {
+      transparent_background = false,
+      variant = "hard", -- 'hard'|'medium'|'soft'
+      overrides = {}, -- add custom overrides
+    },
+  },
+  {
     "AlexvZyl/nordic.nvim",
     lazy = false,
     priority = 1000,
@@ -259,6 +276,8 @@ return {
           "nightfox",
           "darkvoid",
           "nordic",
+          "starry",
+          "evergarden",
         },
       })
     end,
