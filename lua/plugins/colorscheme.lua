@@ -250,6 +250,9 @@ return {
     end,
   },
   {
+    "sam4llis/nvim-tundra",
+  },
+  {
     "zaldih/themery.nvim",
     lazy = false,
     config = function()
@@ -278,6 +281,7 @@ return {
           "nordic",
           "starry",
           "evergarden",
+          "tundra",
         },
       })
     end,
