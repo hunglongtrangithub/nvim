@@ -2,7 +2,7 @@ return {
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
-    enabled = false,
+    enabled = true,
     event = "InsertEnter",
     opts = {
       -- add your options that should be passed to the setup() function here
