@@ -8,12 +8,14 @@ return {
       "lua-language-server",
       "typescript-language-server",
       "astro-language-server",
+      "tinymist",
       -- Formatters
       "black",
       "stylua",
       "shfmt",
       "prettier",
       "sqlfmt",
+      "typstyle",
     },
   },
 }
