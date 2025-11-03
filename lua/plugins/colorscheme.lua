@@ -249,7 +249,6 @@ return {
           "moonfly",
           "moonlight",
           "cyberpunk",
-          "cyberdream",
           "monokai-pro",
           "tokyodark",
           "ayu",
