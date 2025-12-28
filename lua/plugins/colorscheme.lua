@@ -234,6 +234,7 @@ return {
   {
     "sam4llis/nvim-tundra",
   },
+  { "Everblush/nvim", name = "everblush" },
   {
     "zaldih/themery.nvim",
     lazy = false,
@@ -263,6 +264,7 @@ return {
           "starry",
           "evergarden",
           "tundra",
+          "everblush",
         },
       })
     end,
