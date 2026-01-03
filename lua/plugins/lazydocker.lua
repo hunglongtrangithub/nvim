@@ -1,15 +1,14 @@
 return {
-  "crnvl96/lazydocker.nvim",
-  event = "VeryLazy",
-  opts = {}, -- automatically calls `require("lazydocker").setup()`
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-  },
+  "mgierada/lazydocker.nvim",
+  dependencies = { "akinsho/toggleterm.nvim" },
+  event = "BufRead",
   keys = {
     {
       "<leader>k",
-      "<cmd>LazyDocker<CR>",
-      desc = "Lazydocker",
+      function()
+        require("lazydocker").open()
+      end,
+      desc = "Open Lazydocker floating window",
     },
   },
 }
