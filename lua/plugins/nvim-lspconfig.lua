@@ -2,8 +2,8 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      ---@type table<string, lazyvim.lsp.Config|boolean>
       servers = {
-        pyright = { enabled = false },
         clangd = {
           -- avoid using clangd for protobuf files
           filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" },
