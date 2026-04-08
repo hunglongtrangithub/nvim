@@ -203,12 +203,8 @@ return {
       aggressive_spell = false,
     },
   },
-  {
-    "EdenEast/nightfox.nvim",
-  },
-  {
-    "aliqyan-21/darkvoid.nvim",
-  },
+  { "EdenEast/nightfox.nvim" },
+  { "aliqyan-21/darkvoid.nvim" },
   {
     "ray-x/starry.nvim",
     opts = {
@@ -231,9 +227,7 @@ return {
     lazy = false,
     priority = 1000,
   },
-  {
-    "sam4llis/nvim-tundra",
-  },
+  { "sam4llis/nvim-tundra" },
   { "Everblush/nvim", name = "everblush" },
   {
     "zaldih/themery.nvim",
