@@ -2,7 +2,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      ---@type table<string, lazyvim.lsp.Config|boolean>
       servers = {
         clangd = {
           -- avoid using clangd for protobuf files
