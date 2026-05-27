@@ -6,9 +6,9 @@
 vim.keymap.set("n", "<leader>t", "<cmd>Themery<cr>")
 
 -- Toggle terminal
-vim.keymap.set({ "n", "t" }, "<C-\\>", function()
-  require("snacks").terminal.toggle(nil, { interactive = true, win = { position = "float" } })
-end, { noremap = true, silent = true, desc = "Open New Terminal" })
+-- vim.keymap.set({ "n", "t" }, "<C-\\>", function()
+--   require("snacks").terminal.toggle(nil, { interactive = true, win = { position = "float" } })
+-- end, { noremap = true, silent = true, desc = "Open New Terminal" })
 
 -- -- Keep cursor centered when scrolling
 -- vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
