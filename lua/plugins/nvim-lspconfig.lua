@@ -2,9 +2,11 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      --- @type table<string,vim.lsp.Config>
+      ---@alias lazyvim.lsp.Config vim.lsp.Config|{mason?:boolean, enabled?:boolean, keys?:any[]}
+      ---@type table<string, lazyvim.lsp.Config|boolean>
       servers = {
         clangd = {
+          mason = false,
           -- avoid using clangd for protobuf files
           filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" },
         },

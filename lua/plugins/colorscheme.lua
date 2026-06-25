@@ -236,37 +236,13 @@ return {
   },
   { "Everblush/nvim", name = "everblush" },
   {
-    "zaldih/themery.nvim",
-    lazy = false,
-    config = function()
-      require("themery").setup({
-        themes = {
-          "kanagawa",
-          "night-owl",
-          "tokyonight",
-          "solarized-osaka",
-          "catppuccin",
-          "material",
-          "moonfly",
-          "moonlight",
-          "cyberpunk",
-          "monokai-pro",
-          "tokyodark",
-          "ayu",
-          "neofusion",
-          "patana",
-          "monokai-nightasty",
-          "rose-pine",
-          "flow",
-          "nightfox",
-          "darkvoid",
-          "nordic",
-          "starry",
-          "evergarden",
-          "tundra",
-          "everblush",
-        },
-      })
-    end,
+    "RRethy/base16-nvim",
+  },
+
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = function() end,
+    },
   },
 }
