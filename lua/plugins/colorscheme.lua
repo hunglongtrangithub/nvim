@@ -236,6 +236,12 @@ return {
   },
   { "Everblush/nvim", name = "everblush" },
   {
+    "RRethy/base16-nvim",
+    config = function()
+      require("matugen").setup()
+    end,
+  },
+  {
     "zaldih/themery.nvim",
     lazy = false,
     config = function()
@@ -265,6 +271,7 @@ return {
           "evergarden",
           "tundra",
           "everblush",
+          "base16-nvim",
         },
       })
     end,
