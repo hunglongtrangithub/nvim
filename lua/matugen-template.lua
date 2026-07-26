@@ -60,6 +60,13 @@ function M.setup()
     end
   end
 
+  -- Clear gitsigns highlights so they re-derive from the new palette.
+  for hl_name, _ in pairs(vim.api.nvim_get_hl(0, {})) do
+    if type(hl_name) == "string" and hl_name:match("^GitSigns") then
+      pcall(vim.cmd, "hi! clear " .. hl_name)
+    end
+  end
+
   vim.cmd("doautocmd ColorScheme")
 end
 

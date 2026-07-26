@@ -22,3 +22,4 @@ vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
 
 vim.g.autoformat = false
 vim.opt.conceallevel = 0
+vim.opt.relativenumber = true
