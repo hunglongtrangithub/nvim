@@ -60,24 +60,19 @@ function M.setup()
     end
   end
 
-  -- Clear gitsigns highlights so they re-derive from the new palette.
-  for hl_name, _ in pairs(vim.api.nvim_get_hl(0, {})) do
-    if type(hl_name) == "string" and hl_name:match("^GitSigns") then
-      pcall(vim.cmd, "hi! clear " .. hl_name)
-    end
-  end
-
   vim.cmd("doautocmd ColorScheme")
 end
 
 -- Register a signal handler for SIGUSR1 (matugen updates)
 local signal = vim.uv.new_signal()
-signal:start(
-  "sigusr1",
-  vim.schedule_wrap(function()
-    package.loaded["matugen"] = nil
-    require("matugen").setup()
-  end)
-)
+if signal then
+  signal:start(
+    "sigusr1",
+    vim.schedule_wrap(function()
+      package.loaded["matugen"] = nil
+      require("matugen").setup()
+    end)
+  )
+end
 
 return M
